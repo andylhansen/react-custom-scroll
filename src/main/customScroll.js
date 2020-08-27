@@ -301,7 +301,7 @@ class CustomScroll extends Component {
   }
 
   getScrollStyles = () => {
-    const scrollSize = this.scrollbarYWidth || 20
+    const scrollSize = this.scrollbarYWidth || 20  + (this.props.scrollSizeAdjustment || 0)
     const marginKey = this.props.rtl ? 'marginLeft' : 'marginRight'
     const innerContainerStyle = {
       height: this.props.heightRelativeToParent || this.props.flex ? '100%' : ''
